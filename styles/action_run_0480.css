@@ -1,0 +1,26 @@
+/*-----------------------------------------------------
+  ActionType1 - カウントアップ
+-----------------------------------------------------*/
+.action_type_1_area{
+    grid-template-rows: 62px 1fr;
+    grid-template-columns:1fr;
+    
+    -ms-grid-rows: 62px 1fr;
+    -ms-grid-columns: 1fr;
+
+    height: 320px;
+}
+
+
+/*-----------------------------------------------------
+  ActionType2 - カウントダウン
+-----------------------------------------------------*/
+.action_type_2_area{
+    grid-template-rows: 62px 1fr;
+    grid-template-columns:1fr;
+    
+    -ms-grid-rows: 62px 1fr;
+    -ms-grid-columns: 1fr;
+
+    height: 320px;
+}

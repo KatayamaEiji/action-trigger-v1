@@ -1,0 +1,108 @@
+
+/*-----------------------------------------------------
+検索結果エリア
+-----------------------------------------------------*/
+.result_area{
+    padding:5px;
+    float:left;
+    width:100%;
+}
+.result_data{
+    float:left;
+    width:100%;
+    background-color:var(--main-bg-color-dark);
+    border:2px inset white;
+    border-radius: 5px;
+}
+.target_action_date{
+    float:left;
+    padding:10px;
+}
+/*-----------------------------------------------------
+カレンダー
+-----------------------------------------------------*/
+.calendar_area{
+    padding:5px;
+}
+
+.calendar_area table{
+    clear:both;
+
+    border-collapse: collapse;
+    border-spacing: 0px;
+
+    margin:0px auto;
+
+    width:700px;
+    max-width:700px;
+
+}
+.calendar_area th {
+    border: solid 1px #c4c4c4;
+    background-color: var(--sub-bg-color);
+    color:var(--sub-font-color);
+    max-height:100px;
+    text-align: center;
+}
+
+.calendar_area td {
+    border: solid 1px #c4c4c4;
+    vertical-align: top;
+
+    width:100px;
+    max-width:100px;
+    height:80px;
+    max-height:80px;
+    padding:2px 4px;
+    line-height:1.5em;
+}
+.calendar_area td.currentMonth {
+    background-color: white;
+}
+.calendar_area td.otherMonth {
+    background-color: white;
+    color:#dddddd;
+}
+.calendar_area td.otherMonth .action_chk img{
+    opacity:0.5;
+}
+.calendar_area td .action_chk{
+    float:right;
+    margin:0px;
+    padding:0px 5px 5px 0px;
+}
+.calendar_area td.check_off .action_chk img{
+    opacity:0.5;
+}
+.calendar_area td .day{
+    font-size:1.5em;
+    font-weight: bold;
+}
+/* 日曜日 */
+.calendar_area td.week_0 .day{
+    color:#ec544d;
+}
+/* 土曜日 */
+.calendar_area td.week_6 .day{
+    color:#404df5;
+}
+/* 祝日 */
+.calendar_area td.public_holiday{
+    color:#ec544d;
+}
+/* 今日 */
+.calendar_area td.today{
+    border: solid 5px #c4c4c4;
+}
+/* 選択 */
+.calendar_area td.select_day{
+    background-color:#fff2cc;
+}
+/* 当月以外 */
+.calendar_area td.currentMonth a{
+    color:#444444;
+}
+/* 当月以外 */
+.calendar_area td.otherMonth a{
+    color:#dddddd;
+}

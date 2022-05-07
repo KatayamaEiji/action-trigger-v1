@@ -1,0 +1,427 @@
+#main form {
+    height: 100%;
+    width: 100%;
+}
+
+/*-----------------------------------------------------
+  アニメーション
+-----------------------------------------------------*/
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+    {
+    opacity: 0;
+}
+
+/*-----------------------------------------------------
+  GRID - main_container
+-----------------------------------------------------*/
+
+#main_container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: min-content 1fr 100px;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: min-content 1fr 100px;
+    -ms-grid-columns: 1fr;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#action_title_container_item {
+    grid-row: 1;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    position: relative;
+}
+
+#action_run_container_item {
+    grid-row: 2;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 4px inset white;
+    border-radius: 5px;
+    background-color: var(--main-bg-color-dark);
+    padding: 5px;
+}
+
+/* アクション実行状態情報 */
+
+/* アクション説明 */
+
+.action_info {
+    clear: both;
+    padding: 5px 5px 5px 5px;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.action_info>div {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.action_info>div>h1 {
+    clear: both;
+    float: left;
+    width: 100%;
+    color: #364e96;
+    /*文字色*/
+    /*線の種類（点線）2px 線色*/
+    border-bottom: solid 2px #364e96;
+    padding: 5px;
+    font-size: 2em;
+}
+
+.action_info>div>h1+div {
+    margin-left: 30px;
+}
+
+.action_info h2 {
+    clear: both;
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 1.8em;
+    position: relative;
+    /*相対位置*/
+    margin-left: 20px;
+    padding: 0.0em 0.5em 0.0em 1.5em;
+    /*アイコン分のスペース*/
+    line-height: 1.4;
+    /*行高*/
+    color: var(--black);
+    /*文字色*/
+}
+
+.action_info h2:before {
+    font-family: "Font Awesome 5 Free";
+    /*忘れずに*/
+    font-weight: 900;
+    content: "\f138";
+    /*アイコンのユニコード*/
+    position: absolute;
+    /*絶対位置*/
+    font-size: 1em;
+    /*サイズ*/
+    left: 0.25em;
+    /*アイコンの位置*/
+    top: 0em;
+    /*アイコンの位置*/
+    color: var(--black);
+    /*アイコン色*/
+}
+
+#button_field_container_item {
+    grid-row: 3;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    text-align: center;
+}
+
+.button_field input {
+    width: 50% !important;
+    min-width: 50% !important;
+}
+
+.button_field button {
+    width: 50% !important;
+    min-width: 50% !important;
+}
+
+.button_field p {
+    text-align: center;
+}
+
+.btn-float-left {
+    float: left;
+}
+
+/*-----------------------------------------------------
+  アクションメッセージ（フェードイン、フェードアウト）
+-----------------------------------------------------*/
+
+.actionMessage {
+    display: none;
+    /* 初期状態は非表示 */
+    width: 100%;
+    background-color: gray;
+    opacity: 0.90;
+    /* 画面上部に表示 */
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    text-align: center;
+    padding: 10px;
+    z-index: 3;
+}
+
+.actionMessage h1 {
+    font-size: 5em;
+    color: var(--red);
+}
+
+/*-----------------------------------------------------
+  アクション開始メッセージ
+-----------------------------------------------------*/
+
+.actionReadyMessage {
+    width: 100%;
+}
+.actionReadyMessage img {
+    width: 100%;
+}
+
+/*-----------------------------------------------------
+  アクション達成メッセージ（イメージ）
+-----------------------------------------------------*/
+
+.actionCompleteMessage {
+    width: 100%;
+}
+
+.actionCompleteMessage img {
+    width: 100%;
+}
+
+/*-----------------------------------------------------
+  アクション種別ごとに変更されるエリア
+-----------------------------------------------------*/
+
+.action_type_area {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+  達成ボタン
+-----------------------------------------------------*/
+.compleate_button_area span{
+    float:left;
+    clear:both;
+    width:100%;
+}
+
+/*-----------------------------------------------------
+  ActionType1 - カウントアップ
+-----------------------------------------------------*/
+
+.action_type_1_area {
+    margin-bottom: 20px;
+}
+
+.action_type_1_time_area {
+    float:left;
+    clear:both;
+    padding: 5px;
+    font-size: 1.8em;
+}
+
+.action_type_1_basic_complete_time {
+    width: 600px;
+    margin-left: 1.85em;
+    text-align: left;
+}
+
+.action_type_1_basic_complete_time span {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.action_type_1_time {
+    border: 2px solid var(--main-boder2-color);
+    border-radius: 5px;
+    background-color: #72855b;
+    box-shadow: inset 5px 5px 5px #333;
+    width: 600px;
+    height: 170px;
+    margin-left: 1.85em;
+    line-height: 0;
+    position: relative;
+}
+
+.action_type_1_time_counter .img_num {
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+    z-index: 0;
+}
+
+.action_type_1_time_counter_sp img {
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+}
+
+#action_type_1_time_counter0 img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#action_type_1_time_counter1 img {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+#action_type_1_time_counter_sp1 img {
+    position: absolute;
+    left: 170px;
+    top: 10px;
+}
+
+#action_type_1_time_counter2 img {
+    position: absolute;
+    left: 210px;
+    top: 10px;
+}
+
+#action_type_1_time_counter3 img {
+    position: absolute;
+    left: 290px;
+    top: 10px;
+}
+
+#action_type_1_time_counter_sp2 img {
+    position: absolute;
+    left: 370px;
+    top: 10px;
+}
+
+#action_type_1_time_counter4 img {
+    position: absolute;
+    left: 410px;
+    top: 10px;
+}
+
+#action_type_1_time_counter5 img {
+    position: absolute;
+    left: 490px;
+    top: 10px;
+}
+
+/*-----------------------------------------------------
+  ActionType2 - カウントダウン
+-----------------------------------------------------*/
+
+.action_type_2_area {
+    margin-bottom: 20px;
+}
+
+.action_type_2_time_area {
+    float:left;
+    clear:both;
+    padding: 5px;
+    font-size: 1.8em;
+}
+
+.action_type_2_basic_complete_time {
+    width: 600px;
+    margin-left: 1.85em;
+    text-align: left;
+}
+
+.action_type_2_basic_complete_time span {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.action_type_2_time {
+    border: 2px solid var(--main-boder2-color);
+    border-radius: 5px;
+    background-color: #72855b;
+    box-shadow: inset 5px 5px 5px #111;
+    width: 600px;
+    height: 170px;
+    margin-left: 1.85em;
+    line-height: 0;
+    position: relative;
+}
+
+.action_type_2_time_counter .img_num {
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+}
+
+.action_type_2_time_counter_sp img {
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+}
+
+#action_type_2_time_counter0 img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#action_type_2_time_counter1 img {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+#action_type_2_time_counter_sp1 img {
+    position: absolute;
+    left: 170px;
+    top: 10px;
+}
+
+#action_type_2_time_counter2 img {
+    position: absolute;
+    left: 210px;
+    top: 10px;
+}
+
+#action_type_2_time_counter3 img {
+    position: absolute;
+    left: 290px;
+    top: 10px;
+}
+
+#action_type_2_time_counter_sp2 img {
+    position: absolute;
+    left: 370px;
+    top: 10px;
+}
+
+#action_type_2_time_counter4 img {
+    position: absolute;
+    left: 410px;
+    top: 10px;
+}
+
+#action_type_2_time_counter5 img {
+    position: absolute;
+    left: 490px;
+    top: 10px;
+}

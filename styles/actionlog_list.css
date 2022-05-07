@@ -1,0 +1,61 @@
+
+/*-----------------------------------------------------
+検索結果エリア
+-----------------------------------------------------*/
+.target_action_date{
+    float:left;
+    padding:10px;
+}
+/*-----------------------------------------------------
+アクションリスト
+-----------------------------------------------------*/
+.list_area{
+    padding:5px;
+}
+
+.list_area table{
+    width:100%;
+    background-color:var(--edit-body-color);
+
+    /* border:2px groove var(--main-boder-color); */
+}
+.list_area th{
+    text-align: left;
+    vertical-align: text-top;
+    padding:5px;
+
+    border: solid 1px #c4c4c4;
+    background-color: var(--sub-bg-color);
+    color:var(--sub-font-color);
+}
+.list_area td{
+    vertical-align: text-top;
+    padding:5px;
+    
+    border: solid 1px #c4c4c4;
+}
+.list_area tr th:nth-child(1){
+    width:120px;
+    max-width:120px;
+}
+.list_area .action_time{
+    width:120px;
+    max-width:120px;
+}
+.list_area .action_time_span{
+    width:100px;
+    max-width:100px;
+}
+
+.list_area tr th:nth-child(4){
+    width:50px;
+    max-width:50px;
+}
+.list_area tr th:nth-child(5){
+    width:50px;
+    max-width:50px;
+}
+.list_area tr th:nth-child(6){
+    width:50px;
+    max-width:50px;
+}

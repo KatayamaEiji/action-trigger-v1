@@ -1,0 +1,50 @@
+.badget_area{
+    grid-template-rows: 80px 400px;
+    grid-template-columns: 1fr;
+    
+    -ms-grid-rows: 80px 400px;
+    -ms-grid-columns: 1fr;
+}
+
+/**
+予算情報表示
+*/
+.badget_info_area {
+    width:100%;
+}
+
+/**
+操作エリア
+*/
+.operator_area{
+    width:100%;
+}
+
+
+/*--------------------------------------------------------------
+*/
+/**
+    支出一覧
+*/
+.spend_area table tr .spend_date{
+    max-width:200px;
+    min-width:200px;
+    width:200px;
+}
+.spend_area table tr .spend_money{
+    max-width:150px;
+    min-width:150px;
+    width:150px;
+}
+
+.spend_area table tr .edit{
+    max-width:60px;
+    min-width:60px;
+    width:60px;   
+}
+
+.spend_area table tr .delete{
+    max-width:60px;
+    min-width:60px;
+    width:60px;
+}

@@ -1,0 +1,333 @@
+
+.menu button{
+    width: 100%;
+    clear:both;
+    float:left;
+}
+
+.menu h3{
+    padding:5px;
+}
+
+/*-------------------------------*/
+/* [start] body_area             */
+#body_area {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr 200px;
+    grid-template-columns:1fr 230px;
+    
+    -ms-grid-rows: 1fr 200px;
+    -ms-grid-columns: 1fr 230px;
+
+    height: 100%;
+    width: 100%;
+    margin:0px auto;
+}
+
+/*
+* body_area_main
+*/
+#body_area_main{
+    grid-row: 1 ;
+    grid-column: 1 / span 1;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1; /* MS対策(手動) */
+
+    padding:5px;
+}
+.action_table_list{
+    float:left;
+    width:100%;
+
+    background-color:gray;
+    border:4px inset white;
+    border-radius: 5px;
+    padding:5px;
+}
+
+#body_area_side{
+    grid-row: 1 / 3;
+    grid-column: 2 ;
+
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 3;
+    -ms-grid-row-span: 3; /* MS対策(手動) */
+
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 2;
+    -ms-grid-column-span: 1; /* MS対策(手動) */
+
+    padding:5px;
+}
+#body_area_side .side_user_info{
+    margin:0px;
+
+    background-color:var(--main-bg-color-dark);
+    border:4px inset white;
+    border-radius: 5px;
+    padding:5px;
+
+    height:100%;
+}
+#body_area_side .side_user_info td{
+    text-align: left;
+}
+
+
+.action_title h2{
+    float:left;
+    font-size:1.5rem;
+    margin:3px 0px;
+    font-weight: bold;
+}
+.action_title .action_add{
+    float:right;
+}
+.action_title .action_add img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/**
+お知らせ情報エリア
+*/
+#info_area {
+    grid-row: 2 ;
+    grid-column: 1;
+
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1; /* MS対策(手動) */
+
+    padding:5px;
+}
+
+#info_area .info_messege{
+    margin:0px;
+    padding:5px;
+    background-color: var(--edit-body-color);
+    border:2px groove var(--main-boder-color);
+
+    font-weight: bold;
+    font-size:1em;
+
+    height: 100%;
+}
+#info_area .info_messege div{
+    height: 100%;
+    overflow-y: scroll;
+}
+/* [end] body_area               */
+/*-------------------------------*/
+
+/*-------------------------------*/
+/* [start] action_area           */
+.action_area{
+    float:left;
+    width:100%;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+/**
+アクション情報ブロック
+*/
+.action_block{
+    width: 50%;
+    float:left;
+    
+    margin:0px;
+    padding:0px 5px 5px 0px;
+}
+
+.action_box_line{
+    padding: 5px 8px;
+    display: -ms-grid;
+    display: grid;
+
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr max-content;
+    
+    -ms-grid-rows: max-content;
+    -ms-grid-columns: 1fr max-content;
+
+    background:linear-gradient(to right, transparent 99%,var(--main-bg-color-dark2) 100%),
+    linear-gradient(to bottom, var(--main-bg-color-light) , var(--main-bg-color) 30%,var(--main-bg-color-dark) 90%,var(--main-bg-color-dark2) 100%);
+    
+    border:3px groove white;
+    border-radius: 10px;
+}
+.action_box_line:hover{
+    
+    background:linear-gradient(to right, transparent 99%,var(--main-bg-color-dark2) 100%),
+    linear-gradient(to bottom , var(--white) , var(--main-bg-color-light) 30%,var(--main-bg-color) 90%,var(--main-bg-color-dark2));
+
+    cursor: pointer;
+}
+.action_main{
+    grid-row: 1 ;
+    grid-column: 1 / 1;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1; /* MS対策(手動) */
+
+    /* ---------------------------- */
+    display: -ms-grid;
+    display: grid;
+
+    grid-template-rows: max-content max-content;
+    grid-template-columns:2.5rem 1fr ;
+    
+    -ms-grid-rows: max-content max-content;
+    -ms-grid-columns: 2.5rem 1fr ;
+}
+.action_main .action_type{
+    grid-row: 1 / 2 ;
+    grid-column: 1;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    -ms-grid-row-span: 2; /* MS対策(手動) */
+}
+.action_main h3 {
+    margin: 0px;
+}
+.del {
+    background-image: linear-gradient(transparent 0.6em, #111 0, #111 calc(0.6em + 1px), transparent 0, transparent calc(0.6em + 3px), #111 0, #111 calc(0.6em + 4px), transparent 0);
+    color: #888;
+    text-decoration: none;
+}
+
+.delimg {
+    transform: rotate(-18deg);
+    margin: 0 10px 0 -45px;
+}
+
+.action_main .new_action {
+    color: var(--red);
+    margin: 0px 5px 0px 0px;
+    padding: 2px 5px;
+    font-size: 0.7em;
+    font-weight: bold;
+
+    overflow: hidden;
+    float:left;
+
+
+    border:1px solid var(--main-boder2-color);
+    background-color: var(--white);
+}
+.action_main .continue_action {
+    margin: 0px 5px 0px 0px;
+    padding: 0px;
+    font-size: 0.7em;
+    font-weight: bold;
+
+    border:1px solid var(--main-boder2-color);
+
+    overflow: hidden;
+    float:left;
+
+    animation: continue_action_fuwa 3s infinite linear alternate;
+}
+.action_main .continue_action p{
+    animation: continue_action_mozi 3s linear infinite;
+    transform: translateX(-130%);/*初期位置*/
+    margin:0px;
+} 
+
+@keyframes continue_action_fuwa {
+    0% {
+        color: var(--sub-font-color-light);
+        background-color: var(--btn-primary-bg-color);
+    }
+    100% {
+        color: var(--white);
+        background-color: var(--btn-primary-bg-color-light);
+    }
+}
+@keyframes continue_action_mozi {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.action_main .action_block_title{
+    grid-row: 1;
+    grid-column: 2;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+}
+.action_main .action_info_block{
+    grid-row: 2;
+    grid-column: 2;
+
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+}
+.action_mark_block{
+    float :left;
+    clear:both;
+}
+.action_continue_block{
+    float :left;
+    clear:both;
+}
+.action_kigen_block{
+    float :left;
+    clear:both;
+    padding-bottom:5px;
+}
+.action_table_menu{
+    grid-row: 1 ;
+    grid-column: 2;
+
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 2;
+    -ms-grid-column-span: 1; /* MS対策(手動) */
+
+    padding:0px 5px;
+    font-size:2.5em;
+    vertical-align: top;
+}
+
+
+/* [end] action_area             */
+/*-------------------------------*/
+
+
+/*-----------------------------------------------------
+  side_banner
+-----------------------------------------------------*/
+.side_banner{
+    width:200px;
+    border: 2px var(--sub-bg-color)  solid;
+}
+
+/* 編集ボタン */
+.edit_item{
+    padding:2px;
+    cursor:pointer;
+    margin-right:10px;
+    font-weight: bold;
+}
+.edit_item i::before{
+    color:var(--black);
+}

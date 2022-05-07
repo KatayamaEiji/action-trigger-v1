@@ -1,0 +1,15 @@
+.action_block{
+    width: 100%;
+    float:left;
+    padding:5px;
+}
+.action_block_line {
+    grid-template-rows: 65px 1fr;
+    grid-template-columns: 1fr 45px;
+    
+    -ms-grid-rows: 65px 1fr;
+    -ms-grid-columns: 1fr 45px;
+
+    width: 100%;
+    padding: 10px 10px 0px 0px;
+}

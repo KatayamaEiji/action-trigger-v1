@@ -1,0 +1,26 @@
+/*　画面サイズが1024pxからはここを読み込む　*/
+html{
+    font-size:1em;
+}
+
+.input_table th{
+    width:150px;
+}
+
+#header_area h1{
+    font-size: 1.5rem;
+}
+
+
+/* 入力項目 */
+input[type=number] {
+    text-align: right;
+}
+input[type=date],.disp_day {
+    width:170px;
+}
+input[type=time],.disp_time {
+    width:130px;
+}
+
+

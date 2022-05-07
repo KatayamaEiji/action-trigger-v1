@@ -1,0 +1,120 @@
+/**
+* アクションリスト
+*/
+
+/*-----------------------------------------------------
+検索エリア
+-----------------------------------------------------*/
+.find_area{
+    padding:5px;
+    float:left;
+    width:100%;
+}
+.find_input{
+    float:left;
+    width:100%;
+
+    background-color:var(--main-bg-color-dark);
+    border:2px inset white;
+    border-radius: 5px;
+    padding:5px;
+}
+
+/*-----------------------------------------------------
+検索結果エリア
+-----------------------------------------------------*/
+.result_area{
+    padding:5px;
+    float:left;
+    width:100%;
+}
+.result_data{
+    float:left;
+    width:100%;
+    background-color:var(--main-bg-color-dark);
+    border:2px inset white;
+    border-radius: 5px;
+}
+/*-----------------------------------------------------
+アクションリスト
+-----------------------------------------------------*/
+.list_area{
+    padding:5px;
+}
+
+.list_area table{
+    width:100%;
+    background-color:var(--edit-body-color);
+
+    border:2px groove var(--main-boder-color);;
+}
+.list_area th{
+    text-align: left;
+    vertical-align: text-top;
+    padding:5px;
+
+    background-color:var(--accent-bg-color);
+    color:var(--accent-font-color);
+
+    border:1px solid;
+}
+.list_area td{
+    vertical-align: text-top;
+    padding:5px;
+    border:1px solid;
+}
+.list_area tr td:nth-child(1){
+    width:50px;
+    text-align: center;
+}
+.list_area tr td:nth-child(3){
+    width:50px;
+    text-align: center;
+}
+.list_area tr td:nth-child(4){
+    width:50px;
+    text-align: center;
+}
+.list_area tr td:nth-child(5){
+    width:50px;
+    text-align: center;
+}
+.list_area tr td:nth-child(6){
+    width:50px;
+    text-align: center;
+}
+
+/*-----------------------------------------------------
+  アクションリストのヘッダー
+-----------------------------------------------------*/
+.list_header_area{
+    float:left;
+    width:100%;
+
+    padding:5px;
+}
+.list_header{
+    float:left;
+    width:100%;
+
+    background-color:var(--edit-body-color);
+    border:2px groove white;
+    border-radius: 5px;
+    padding:3px 10px;
+}
+.list_header h2{
+    float:left;
+}
+.list_header .action_add{
+    float:right;
+}
+.list_header .action_add img {
+    width: 25px;
+    height: 25px;
+}
+.list_header .action_add:hover img {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    width: 25px;
+    height: 25px;
+}

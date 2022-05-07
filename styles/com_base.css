@@ -1,0 +1,736 @@
+:root {
+    --main-bg-color-dark2: #444444;
+    --main-bg-color-dark: #c9c2b5;
+    --main-bg-color: #E4DCCC;
+    --main-bg-color-light: #EBE6DA;
+    --sub-bg-color: #5F2E25;
+    --sub-bg-color-light: #8B6861;
+    --accent-bg-color: #FFD800;
+    --main-font-color: #444444;
+    --sub-font-color: #f5dda4;
+    --sub-font-color-light: yellow;
+    --accent-font-color: #444444;
+    --main-boder-color: #f1e5c1;
+    --main-boder2-color: #afaeaa;
+    --edit-body-color: #f5f3ea;
+    --text-body-color: white;
+    --btn-primary-bg-color: #5F2E25;
+    --btn-primary-bg-color-light: #8B6861;
+    --btn-primary-border-color: #8B6861;
+    --btn-primary-border-color-light: white;
+
+    --btn-info-bg-color: #C4AD9B;
+    --btn-info-bg-color-light: #e0d4cb; /* 120　明るく */
+    --btn-info-border-color: #968477; /* 60　暗く */
+    --btn-info-border-color-light: white;
+    --btn-info-font-color: #444444;
+    
+    --btn-success-bg-color: #2A912B;
+    --btn-success-bg-color-light: #91c694; /* 120　明るく */
+    --btn-success-border-color: #247028;  /* 60　暗く */
+    --btn-success-border-color-light: white;
+    --btn-success-font-color: #FFF;
+
+    --btn-disabled-bg-color: #888;
+    --btn-disabled-border-color: #444;
+    --font-family-sans-serif: "メイリオ", Meiryo, Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --white : #FFF; /* 白色の変わりに使用 */
+    --red : #B60005; /* 赤色の変わりに使用 */
+    --black : #444444; /* 黒色の変わりに使用 */
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color:var(--main-font-color);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* v-cloak時に非表示 */
+[v-cloak] {
+    display: none;
+}
+
+/* Radio ボタン */
+.radio_item{
+    border:2px ridge white;
+    border-radius: 5px;
+    background-color:var(--main-bg-color-dark);
+
+    padding:5px;
+    float:left;
+    width:100%;
+    margin-top:5px;
+}
+.radio_title{
+    float: left;
+    font-weight: bold;
+    clear:both;
+    width:100%;
+}
+
+/* ボタン */
+.ui-button {
+    padding: 5px 20px !important;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--btn-primary-bg-color);
+    border-color: var(--btn-primary-border-color);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--btn-primary-bg-color-light);
+    border-color: var(--btn-primary-border-color-light);
+}
+
+.btn-info {
+    color: var(--btn-info-font-color);
+    background-color: var(--btn-info-bg-color);
+    border-color: var(--btn-info-border-color);
+}
+.btn-info:hover {
+    color: var(--btn-info-font-color);
+    background-color: var(--btn-info-bg-color-light);
+    border-color: var(--btn-info-border-color-light);
+}
+
+
+.btn-success {
+    color: var(--btn-success-font-color);
+    background-color: var(--btn-success-bg-color);
+    border-color: var(--btn-success-border-color);
+}
+.btn-success:hover {
+    color: var(--btn-success-font-color);
+    background-color: var(--btn-success-bg-color-light);
+    border-color: var(--btn-success-border-color-light);
+}
+
+/* マークダウンエディタ */
+.editor-toolbar{
+    background-color: white;
+}
+
+/* お知らせ */
+
+.info {
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 5px;
+    overflow: auto;
+    box-shadow: 0px 0px 10px;
+    border: 1px solid #000;
+    background-color: beige;
+}
+
+/* 入力項目：金額入力 */
+
+.input_money {
+    width: 220px;
+    max-width: 220px;
+}
+
+/* 入力項目:日数入力 */
+
+.input_day {
+    width: 55px;
+    max-width: 55px;
+}
+
+/* 入力項目:月数入力 */
+
+.input_month {
+    width: 55px;
+    max-width: 55px;
+}
+
+/* 必須入力 */
+
+.required {
+    color: var(--red);
+    padding: 3px;
+}
+
+.sp_line {
+    float: left;
+    clear: both;
+}
+
+/* クリック出来るエリア */
+
+.hover_pointer:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    cursor: pointer;
+}
+
+/* 非表示エリア */
+
+.hidden_area {
+    display: none;
+}
+
+/* テーブル */
+
+th {
+    vertical-align: top;
+}
+
+/* */
+
+.modal-header {
+    border-bottom: groove 2px;
+}
+
+.modal-body {
+    background-color: beige;
+}
+
+.modal-footer {
+    border-top: groove 2px;
+}
+
+/*-----------------------------------------------------
+  Bootstrap
+-----------------------------------------------------*/
+
+/*.form-control{
+    
+}*/
+
+/*-----------------------------------------------------
+  GRID - container
+-----------------------------------------------------*/
+
+#container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 40px 25px 1fr 25px;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 40px 25px 1fr 25px;
+    -ms-grid-columns: 1fr;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#header {
+    grid-row: 1;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    padding: 0px;
+    margin: 0px;
+    background: var(--sub-bg-color) url("../images/pattern/Melamine-wood-002.png");
+    border-bottom: groove 2px;
+}
+
+#menu {
+    grid-row: 2;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    padding: 0px 10px;
+    margin: 0px;
+    background: var(--accent-bg-color) url("../images/pattern/noise_plastic.png");
+    border-bottom: groove 2px;
+}
+
+#menu #menu_area {
+    color: var(--accent-font-color);
+}
+
+#menu #menu_area a {
+    color: var(--accent-font-color);
+    padding:0px 10px 0px 5px;
+}
+
+#main {
+    grid-row: 3;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 5px 10px;
+    color: var(--main-font-color);
+    /*background: linear-gradient(var(--main-bg-color-light),  var(--main-bg-color-dark));*/
+    background: var(--main-bg-color) url("../images/pattern/noise.png");
+}
+
+#edit_body {
+    /*box-shadow: 2px 2px 4px var(--main-boder2-color);*/
+    background-color: var(--edit-body-color);
+    border: 2px groove var(--main-boder-color);
+    ;
+    padding: 5px;
+    margin: 0px;
+}
+
+#fotter {
+    grid-row: 4;
+    grid-column: 1 / span 1;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-column-span: 1;
+    /* MS対策(手動) */
+    text-align: right;
+    color: var(--sub-font-color);
+    background-color: var(--sub-bg-color);
+    border-top: solid 1px #FFF;
+}
+
+/*-----------------------------------------------------
+  GRID - header_area
+-----------------------------------------------------*/
+
+#header_area {
+    width: 100%;
+    margin: 0px auto;
+    color: var(--sub-font-color);
+    padding: 0px 10px;
+}
+
+#header_area h1:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 30px;
+    /*画像の幅*/
+    height: 30px;
+    /*画像の高さ*/
+    background-image: url(../images/system.png);
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#header_area h1 {
+    padding: 0px;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+#title_item {
+    float: left;
+}
+
+/*-- [start] ユーザー情報 --*/
+
+#header_user {
+    float: right;
+    padding: 5px;
+    text-align: left;
+}
+
+.user_values {
+    background-color: var(--text-body-color);
+    border: 1px solid var(--main-boder-color);
+    box-shadow: inset 1px 1px 1px #111;
+    border-radius: 5px;
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 2px 8px;
+}
+
+.userImage {
+    border: blue 1px solid;
+    background-color: #b0c4de;
+    color: blue;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    float: left;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.userName {
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: var(--main-bg-color-dark);
+    box-shadow: inset 1px 1px 1px #111;
+    border-radius: 3px;
+    padding: 2px 10px;
+}
+
+.user_mission {
+    background-color: var(--text-body-color);
+    border: 1px solid var(--main-boder-color);
+    box-shadow: inset 1px 1px 1px #111;
+    border-radius: 5px;
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 2px 8px;
+}
+
+/*-- [end] ユーザー情報 --*/
+
+#logout_item {
+    float: right;
+    padding: 5px;
+    text-align: right;
+}
+
+#logout_item button {
+    border: 1px solid var(--main-boder2-color);
+    font-size: 0.8em;
+    padding: 4px 10px;
+}
+
+/*-----------------------------------------------------
+  共通設定
+-----------------------------------------------------*/
+
+.error {
+    color: Red
+}
+
+.Copyright {
+    color: #ccc;
+}
+
+.input_table {
+    margin: 5px;
+}
+
+.input_table th {
+    width: 150px;
+    text-align: left;
+}
+
+.button_field {
+    float: left;
+    clear: both;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.button_field div {
+    float: left;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+
+/* アクションの種類アイコン(imgタグ) */
+
+.action_type {
+    width: 2rem;
+    min-width: 2rem;
+    padding: 0px 0px 5px 0px;
+}
+
+/* 今日のアクション */
+
+.active_action {
+    background-color: var(--red);
+    border: 1px groove var(--main-boder-color);
+    color: white;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 1px 5px;
+    width: 100px;
+    font-size: 0.5em;
+}
+
+/* 新規アクション */
+
+.new_action {
+    color: var(--red);
+    margin: 0px;
+    padding: 1px;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+/* 追加済みアクション */
+
+.add_action {
+    color: var(--red);
+    margin: 0px;
+    padding: 1px;
+    font-size: 0.5em;
+    font-weight: bold;
+}
+
+/*
+ふわふわして、クリックをアピールします。
+*/
+
+.btn_appeal {
+    -webkit-animation: btn_appeal_fuwa 1s infinite linear alternate;
+    animation: btn_appeal_fuwa 1s infinite linear alternate;
+}
+
+@-webkit-keyframes btn_appeal_fuwa {
+    0% {
+        color: var(--sub-font-color-light);
+        background-color: var(--btn-primary-bg-color);
+    }
+    100% {
+        color: var(--sub-font-color);
+        background-color: var(--btn-primary-bg-color-light);
+    }
+}
+
+@keyframes btn_appeal_fuwa {
+    0% {
+        color: var(--sub-font-color-light);
+        background-color: var(--btn-primary-bg-color);
+    }
+    100% {
+        color: var(--sub-font-color);
+        background-color: var(--btn-primary-bg-color-light);
+    }
+}
+
+/*
+ふわふわして、クリックをアピールします。
+*/
+
+.ledygo {
+    transition: opacity 1s, visibility 1s;
+}
+
+/* 無効ボタン
+*/
+
+input:disabled {
+    background-color: var(--btn-disabled-bg-color) !important;
+    border-color: var(--btn-disabled-border-color) !important;
+    opacity: 1 !important;
+}
+
+button:disabled {
+    background-color: var(--btn-disabled-bg-color) !important;
+    border-color: var(--btn-disabled-border-color) !important;
+    opacity: 1 !important;
+}
+
+/* -----------------------------------------------------
+  きらっとアニメーション
+*/
+
+figure {
+    width: 800px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/*-----------------------------------------------------
+  アクションタイトル
+-----------------------------------------------------*/
+
+.action_title_area {
+    margin: 0px;
+    float: left;
+    width: 100%;
+    padding: 5px 10px;
+    /*animation: action_title_rotation 2s ease 0s 1 alternate none running;*/
+}
+
+@keyframes action_title_rotation {
+    0% {
+        transform: scale(.3);
+    }
+    50% {
+        transform: scale(.6) rotate(-45deg);
+        background: var(--red);
+    }
+    100% {
+        transform: scale(1) rotate(180deg);
+        background: blue;
+    }
+}
+
+.action_title {
+    float: left;
+    width: 100%;
+    background-color: var(--sub-bg-color);
+    color: var(--sub-font-color);
+    border: 2px groove white;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+}
+
+.action_title h1 {
+    font-size: 1.5rem;
+    margin: 5px 0px;
+}
+
+.action_title .btn_cancel {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.action_image_area {
+    float: left;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.action_image_area img {
+    margin: auto 0px;
+    max-width: 50%;
+}
+
+/*-----------------------------------------------------
+  エラー画面
+-----------------------------------------------------*/
+
+.error_info {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.error_button {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.error_button button {
+    width: 80%;
+}
+
+/*-----------------------------------------------------
+  JQueryUI
+-----------------------------------------------------*/
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 1px solid var(--sub-bg-color) !important;
+    background: #f5f8f9 url(images/ui-bg_inset-hard_100_f5f8f9_1x100.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: var(--sub-font-color) !important;
+}
+
+/*-----------------------------------------------------
+  ロック画面
+-----------------------------------------------------*/
+
+.lockScreen {
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: gray;
+    opacity: 0.8;
+    cursor: wait;
+}
+
+.lockScreen h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/*-----------------------------------------------------
+  フェードメッセージ（フェードイン、フェードアウト）
+-----------------------------------------------------*/
+
+.feadMessage {
+    display: none;
+    /* 初期状態は非表示 */
+    width: 300px;
+    /* 画面上部に表示 */
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -175px;
+    /* (width + padding-left + padding-right + border-left + border-right) の半分 */
+    padding: 10px;
+}
+
+/*-----------------------------------------------------
+  メニュー
+-----------------------------------------------------*/
+
+.menu_box {
+    padding: 5px;
+}
+
+.menu_box button {
+    width: 100%;
+}

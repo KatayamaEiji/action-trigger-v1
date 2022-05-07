@@ -1,0 +1,52 @@
+/*　画面サイズが768pxから1024pxまではここを読み込む　*/
+html{
+    font-size:2em;
+}
+
+#container {
+    grid-template-rows: 50px 50px 1fr 50px;
+    grid-template-columns:1fr;
+    
+    -ms-grid-rows: 50px 50px 1fr 50px;
+    -ms-grid-columns: 1fr;
+}
+
+#header_area h1{
+    font-size: 1.5rem;
+}
+
+.input_table th{
+    width:250px;
+}
+
+/* 入力項目 */
+input[type=number] {
+    text-align: right;
+}
+input[type=date],.disp_day {
+    width:300px;
+}
+input[type=time],.disp_time {
+    width:180px;
+}
+
+
+/*-----------------------------------------------------
+  アクションタイトル
+-----------------------------------------------------*/
+.action_type{
+    padding:5px 0px 5px 0px;
+}
+
+
+/*-----------------------------------------------------
+  GRID - header_area
+-----------------------------------------------------*/
+#header_area h1{
+    font-size: 1.5rem;
+}
+
+#header_area h1:before {
+    width: 50px;/*画像の幅*/
+    height: 50px;/*画像の高さ*/
+}

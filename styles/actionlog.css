@@ -1,0 +1,139 @@
+/*-----------------------------------------------------
+アクションログ　共通ＣＳＳ
+-----------------------------------------------------*/
+
+/*-----------------------------------------------------
+  アクションログ　：　フィルター
+-----------------------------------------------------*/
+
+.filter_area{
+    float:left;
+    width:100%;
+    margin-bottom: 10px;
+}
+.filter_area h1{
+    float:left;
+    font-size:0.8em;
+    padding: 5px;
+}
+.filter_area .filter_tag{
+    float:left;
+    width:100%;
+
+    background-color:var(--main-bg-color-dark);
+    border:2px inset white;
+    border-radius: 5px;
+    padding:5px;
+}
+
+.filter_item{
+    border-bottom:1px solid var(--black);
+    padding:2px;
+    cursor:pointer;
+    margin-right:10px;
+}
+.filter_item i::before{
+    color:var(--red);
+}
+
+/*-----------------------------------------------------
+サブメニュー
+-----------------------------------------------------*/
+#action_log_menu_area {
+    clear:both;
+    float:left;
+    padding: 2px 2px 5px 2px;
+}
+#action_log_menu_area button{
+    float:left;
+    min-width:120px;
+    margin:0px 2px;
+}
+
+#action_log_menu_area div{
+    float:left;
+    min-width:120px;
+    margin:0px 2px;
+}
+/*-----------------------------------------------------
+検索結果エリア
+-----------------------------------------------------*/
+.result_area{
+    padding:0px;
+    float:left;
+    width:100%;
+}
+.result_data{
+    float:left;
+    width:100%;
+    background-color:var(--main-bg-color-dark);
+    border:2px inset white;
+    border-radius: 5px;
+}
+.target_action_date{
+    float:left;
+    padding:0px 20px 0px 0px;
+}
+
+.result_data_title{
+    clear:both;
+
+    text-align:center;
+    font-weight: bold;
+    font-size:2em;
+}
+
+/*-----------------------------------------------------
+日別アクション情報
+-----------------------------------------------------*/
+.day_action_log_list{
+    float:left;
+    clear:both;
+    width:100%;
+}
+.day_action_log_list table{
+    width:100%;
+    background-color:var(--edit-body-color);
+
+    border:2px groove var(--main-boder-color);;
+}
+.day_action_log_list th{
+    text-align: left;
+    vertical-align: text-top;
+    padding:5px;
+
+    border: solid 1px #c4c4c4;
+    background-color: var(--sub-bg-color);
+    color:var(--sub-font-color);
+}
+.day_action_log_list td{
+    vertical-align: text-top;
+    padding:5px;
+    border: solid 1px #c4c4c4;
+}
+.day_action_log_list tr td:nth-child(1){
+    width:120px;
+    max-width:120px;
+    text-align: left;
+}
+.day_action_log_list tr td:nth-child(2){
+    width:60px;
+    max-width:60px;
+    text-align: right;
+}
+.day_action_log_list tr td:nth-child(4){
+    width:50px;
+    text-align: center;
+}
+.day_action_log_list tr td:nth-child(5){
+    width:50px;
+    text-align: center;
+}
+.day_action_log_list tr td:nth-child(6){
+    width:50px;
+    text-align: center;
+}
+.day_action_log_list tr td:nth-child(7){
+    width:50px;
+    text-align: center;
+}
